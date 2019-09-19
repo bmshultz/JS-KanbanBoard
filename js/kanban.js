@@ -7,7 +7,7 @@ const message = "Please add a description.";
 const add_btn = document.querySelector(".add");
 add_btn.addEventListener("click", () => {
   const target = document.querySelector("#requested");
-  if (adding == false) {
+  if (adding === false) {
     adding = true;
     target.appendChild(create_item());
   } else {
@@ -18,7 +18,7 @@ add_btn.addEventListener("click", () => {
 const create_item = () => {
   let item = document.createElement("div");
   item.classList.add("item");
-  item.id = item + this.order;
+  item.id = "item-" + order;
   item.draggable = true;
   item.addEventListener("dragstart", e => {
     e.dataTransfer.setData("text", e.target.id);
